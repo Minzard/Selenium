@@ -1,19 +1,10 @@
+// 페이스북 페이지에서 email이라는 id를 가진 Element를 출력하는 코드
+// 2019. 07. 16
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class facebook {
-    WebDriver webDriver;
-
-    @BeforeTest
-    public void setUp () {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-    }
+public class facebook extends initialize{
 
     @Test
     public  void test() {
@@ -23,11 +14,5 @@ public class facebook {
         webDriver.get(baseUrl);
         tagName = webDriver.findElement(By.id("email")).getTagName();
         System.out.println(tagName);
-    }
-
-    @AfterTest
-    public void tearDown () {
-        webDriver.close();
-        System.exit(0);
     }
 }

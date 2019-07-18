@@ -11,33 +11,33 @@ public class Selenium2Example {
         // Notice that the remainder of the code relies on the interface.
         // not the implementation.
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriver webDriver = new ChromeDriver();
 
-        driver.get("http://www.google.com");
+        webDriver.get("http://www.google.com");
 
         // Find the text input element by its name
-        WebElement element = driver.findElement(By.name("q"));
+        WebElement element = webDriver.findElement(By.name("q"));
         element.sendKeys("Cheese!");
 
         // Now submit the form. WebDriver will find the form for us from the element
         element.submit();
 
         // Check the title of the page
-        System.out.println("Page title is : " + driver.getTitle());
+        System.out.println("Page title is : " + webDriver.getTitle());
 
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load. timeout after 10 seconds
-        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+        (new WebDriverWait(webDriver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().startsWith("cheese!");
             }
         });
 
         // Should see : "cheese! - Google Search"
-        System.out.println("Page title is : " + driver.getTitle());
+        System.out.println("Page title is : " + webDriver.getTitle());
 
         // Close the browser
-        driver.quit();
+        webDriver.quit();
 
     }
 }
