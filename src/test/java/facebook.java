@@ -4,7 +4,7 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class facebook extends initialize{
+public class facebook extends initialize {
 
     @Test
     public  void test() {
