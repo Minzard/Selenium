@@ -36,7 +36,7 @@ public class practice_18 extends practice_init{
         webDriver.switchTo().window(windowHandlesSet.get(1));
         // 페이스북 로그인 창에서 각 입력창에 값 전송 후 로그인 버튼 클릭
         webDriver.findElement(By.id("email")).sendKeys("alswp0210@hanmail.net");
-        webDriver.findElement(By.id("pass")).sendKeys("*******");
+        webDriver.findElement(By.id("pass")).sendKeys("********");
         webDriver.findElement(By.name("login")).click();
         pause(3);
 
