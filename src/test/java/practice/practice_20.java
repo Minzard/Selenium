@@ -67,7 +67,14 @@ public class practice_20 extends practice_init{
         webDriver.findElement(By.id("btnSave")).submit();
         pause(1);
 
+        // xpath()를 통해 Visible Text가 'Admin'인 Element 저장
+        // 로그아웃을 위해 선행되어야하는 버튼 클릭
+        WebElement admin = webDriver.findElement(By.xpath("//span[contains(text(), 'Admin')]"));
+        action.moveToElement(admin).click().perform();
+
+        // Admin 버튼을 클릭해 서브 메뉴가 생성되면 logout 버튼 클릭
         WebElement logout = webDriver.findElement(By.name("logout"));
         action.moveToElement(logout).click().perform();
+        pause(3);
     }
 }

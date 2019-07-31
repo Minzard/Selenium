@@ -36,7 +36,7 @@ public class practice_14 extends practice_init {
 
         // sendKeys() 메서드를 통해 input 입력창에 파라미터 값을 넣어줌
         webDriver.findElement(By.id("email1")).sendKeys("alswp0210@abc.com");
-        webDriver.findElement(By.id("password1")).sendKeys("whdrnr");
+        webDriver.findElement(By.id("password1")).sendKeys("********");
         // submit() 메서드를 통해 클릭, 버튼 실행
         webDriver.findElement(By.xpath("//input[@type='submit']")).submit();
         pause(1);
@@ -44,7 +44,14 @@ public class practice_14 extends practice_init {
         WebElement lg1 = webDriver.findElement(By.xpath("//button[@class='btn btn-xs btn-default dropdown-toggle']"));
         action.moveToElement(lg1).click().perform();
 
-        WebElement lg2 = webDriver.findElement(By.name("logout"));
-        action.moveToElement(lg2).click().perform();
+        // xpath()를 통해 Visible Text가 'Admin'인 Element 저장
+        // 로그아웃을 위해 선행되어야하는 버튼 클릭
+        WebElement admin = webDriver.findElement(By.xpath("//span[contains(text(), 'Admin')]"));
+        action.moveToElement(admin).click().perform();
+
+        // Admin 버튼을 클릭해 서브 메뉴가 생성되면 logout 버튼 클릭
+        WebElement logout = webDriver.findElement(By.name("logout"));
+        action.moveToElement(logout).click().perform();
+        pause(3);
     }
 }
