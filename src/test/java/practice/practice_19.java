@@ -6,10 +6,7 @@
 package practice;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class practice_19 extends practice_init{
 

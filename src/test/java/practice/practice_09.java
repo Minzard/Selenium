@@ -11,8 +11,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.beans.ExceptionListener;
-
 public class practice_09 extends practice_init{
 
     @Test

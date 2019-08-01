@@ -33,20 +33,27 @@ public class practice_31 extends practice_init {
         webDriver.findElement(By.xpath("//input[@type='submit']")).submit();
         pause(3);
 
+        // Reports 메뉴를 클릭
+        // 숨겨진 하위메뉴를 클릭하기 위한 선행 과정
         WebElement menu = webDriver.findElement(By.id("reportsMenuId"));
         menu.click();
 
+        // Additional 메뉴를 클릭
+        // 숨겨진 하위메뉴를 클릭하기 위한 선행 과정
         WebElement add = menu.findElement(By.id("AdditionalMenuId"));
         add.click();
+        // Products Statement 메뉴를 클릭
         add.findElement(By.tagName("li")).click();
         pause(3);
 
+        // Date를 입력
         WebElement date = webDriver.findElement(By.id("fromDateId"));
         date.sendKeys("0020190701");
 
         webDriver.findElement(By.id("customReportSearchButtonId")).click();
         pause(1);
 
+        // itemList를 출력하기 위한 리스트 선언
         List<WebElement> itemList;
         itemList = webDriver.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
 

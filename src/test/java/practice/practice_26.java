@@ -25,7 +25,7 @@ public class practice_26 extends practice_init {
 
         // sendKeys() 메서드를 통해 input 입력창에 파라미터 값을 넣어줌
         webDriver.findElement(By.id("email1")).sendKeys("alswp0210@abc.com");
-        webDriver.findElement(By.id("password1")).sendKeys("whdrnr");
+        webDriver.findElement(By.id("password1")).sendKeys("********");
         // submit() 메서드를 통해 클릭, 버튼 실행
         webDriver.findElement(By.xpath("//input[@type='submit']")).submit();
         pause(3);
