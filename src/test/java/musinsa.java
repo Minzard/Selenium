@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class tous extends initialize {
+public class musinsa extends initialize {
 
     @Test
     public void test() {
