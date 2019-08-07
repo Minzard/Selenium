@@ -2,7 +2,7 @@
 // Search product by name
 // 2019. 08. 02.
 
-package TOUS;
+package testSample;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,7 +20,7 @@ public class test010 extends test_init {
         pause(3);
 
         webDriver.findElement(By.id("js-site-search-input")).click();
-        webDriver.findElement(By.id("js-site-search-input")).sendKeys("TOUS");
+        webDriver.findElement(By.id("js-site-search-input")).sendKeys("testSample");
         webDriver.findElement(By.className("js-search-name")).click();
         pause(3);
 

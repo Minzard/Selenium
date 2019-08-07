@@ -2,7 +2,7 @@
 // Sort the products (lowest price first)
 // 2019. 08. 02.
 
-package TOUS;
+package testSample;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

@@ -2,7 +2,7 @@
 // Try to log in with invalid data, correct data, log in correctly and exit correctly.
 // 2019. 08. 01.
 
-package TOUS;
+package testSample;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;

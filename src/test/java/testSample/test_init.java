@@ -2,7 +2,7 @@
 // 초기화 및 종료 관련 클래스로 다른 클래스에서 extends 하여 메서드 및 WebDriver 변수 사용
 // 2019. 07. 22
 
-package TOUS;
+package testSample;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
